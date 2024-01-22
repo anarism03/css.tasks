@@ -1,0 +1,181 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+  font-family: 'Poppins', sans-serif;
+}
+  .box{
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  position: absolute;
+  animation-name: Boxanimate050 ,boxmove;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes Boxanimate050 {
+ 0%{             
+width: 0;
+height: 0;
+ }
+ 25%{
+  width: 50px;
+height: 50px;
+ }
+ 50%{
+background-color: green;
+width: 100px;
+height: 100px;
+ }
+ 75%{
+
+ }
+ 100%{
+  width: 50px;
+  height: 50px;
+background-color: blue;
+ }
+}
+@keyframes boxmove {
+  from{
+    left: 0;
+  }
+  to{
+    left: calc(100% - 50px);
+  }
+}
+/* /////////////////////////////////////Task-2 */
+.pop-button {
+  background-color: #3498db; 
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.3); 
+  padding: 10px 20px; 
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  animation-duration: 0.1s;
+}
+.pop-button:hover{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+.pop-button:active{
+  animation-name: popAnimation;
+}
+@keyframes popAnimation {
+  0% {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 0, 0, 0.5); 
+  }
+  50% {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.3); 
+  }
+  100% {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* ///////////////TASK-3///////////////// */
+.container{
+  height: 100vh;
+  width: 85%;
+  margin: 0 auto;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo img{
+  width: 90px;
+}
+header nav li a{
+  text-decoration: none;
+  width: 772px;
+  color: #263238;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+nav ul{
+  display: flex;
+  gap: 60px;
+  list-style-type: none;
+}
+.button button{
+  background-color: white;
+  border-radius: 5px;
+border: 2px solid #263238;
+width: 220px;
+height: 70px;
+color: #000;
+font-size: 24px;
+font-weight: 400;
+display: flex;
+justify-content: center;
+align-items:  center;
+}
+main .main-container{
+  display: flex;
+
+}
+main h1{
+  color: #000;
+font-size: 64px;
+font-weight: 600;
+line-height: 80px;
+}
+main p{
+  color: #8F95A5;
+font-size: 24px;
+font-weight: 400;
+width: 632px;
+}
+main .black-btn{
+  margin-top: 20px;
+  border-radius: 15px;
+  background: #263238;
+  width: 438px;
+height: 118px;
+color: #FFF;
+font-size: 36px;
+font-weight: 400;
+}
+main .image-main:hover{
+  scale:1.2;
+}
+.any{
+  display: inline-block;
+      transition: transform 0.3s ease-in-out;
+}
+main .description .any:hover{
+  transform: rotate(45deg);
+}
+.black-btn{
+  animation-name: changeColor;
+  animation-duration: 4s;
+} 
+@keyframes changeColor {
+  0% {
+      background-color: #263238;
+  }
+  50% {
+      background-color: #8F95A5;
+  }
+  100% {
+      background-color: #263238;
+  }
+}
+.black-btn{
+  padding: 10px 20px;
+  background-color: #263238;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.black-btn:hover {
+  animation: changeColor 4s infinite; 
+}
